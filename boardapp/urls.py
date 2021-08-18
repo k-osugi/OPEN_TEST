@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import signupfunc, loginfunc, listfunc, logoutfunc, detailfunc, goodfunc, \
-    readfunc, BoardCreate, BoardDelete, BoardUpdate
-
+    readfunc,  BoardCreate, BoardDelete, BoardUpdate
+# mapfunc,
 
 urlpatterns = [
     path('signup/',signupfunc, name = 'signup'),
@@ -14,4 +14,5 @@ urlpatterns = [
     path('create/', BoardCreate.as_view(), name = 'create'),
     path('delete/<int:pk>', BoardDelete.as_view(), name = 'delete'),
     path('update/<int:pk>', BoardUpdate.as_view(), name = 'update'),
+    # path('map/',mapfunc, name = 'map'),
 ]
